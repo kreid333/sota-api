@@ -2,6 +2,7 @@
 const express = require("express");
 const path = require("path");
 const mongoose = require("mongoose");
+const cors = require("cors");
 
 // CREATING INSTANCE OF EXPRESS
 const app = express();
@@ -9,6 +10,7 @@ const app = express();
 // MIDDLEWARE
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(cors());
 
 // PORT
 const PORT = process.env.PORT || 3001;
